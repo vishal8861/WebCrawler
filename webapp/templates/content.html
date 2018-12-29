@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <form method="post">
+        <center>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Get Images</button>
+        </center>
+    </form>
+        <br>
+</div>
+    {% if flag == 'OK'%}
+            {% for key, value in content.items %}
+                <br>
+                <a href="{{key}}">{{key}}</a>
+                <br>
+                <div class="row">
+                    {% for img in value %}
+                        <br>
+                        <img src="{{img}}" class="column">
+                    {% endfor%}
+                </div>
+            {% endfor %}
+        {% else %}
+                <div>
+            <center><p>{{error}}</p></center>
+                </div>
+    {% endif %}
+{% endblock %}

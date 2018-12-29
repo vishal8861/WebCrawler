@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crawler</title>
+</head>
+<body>
+    <center><h1>Crawler</h1></center>
+    <form method="post">
+        <center>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Get Images</button>
+        </center>
+    </form>
+</body>
+</html>

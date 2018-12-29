@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crawler</title>
+    <style>
+        }
+        .column:hover{
+            transform:scale(1.5)
+        }
+        body{
+            margin:0;font-family:arial
+        }
+        .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+.column {
+  flex: 10%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+@media screen and (max-width: 200px) {
+  .column {
+    flex: 25%;
+    max-width: 25%;
+  }
+}
+
+@media screen and (max-height: 200px) {
+  .column {
+    flex: 25%;
+    max-height: 25%;
+  }
+}
+
+@media screen and (max-width: 100px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <div>
+        <center><h2>Crawler</h2></center>
+    </div>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
